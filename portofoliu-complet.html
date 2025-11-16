@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="description" content="SPM Grup - Agenție de consulting digital. Servicii de web development, digital marketing și business strategy.">
+<meta name="keywords" content="web development, digital marketing, business consulting, Romania, Suceava">
+<meta property="og:title" content="SPM Grup | Portofoliu Proiecte | Premium Digital Solutions">
+<meta property="og:description" content="Transformări digitale complete pentru companii în creștere.">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#aa8a34">
+<title>SPM Grup | Portofoliu Proiecte | Premium Digital Solutions</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
+body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #ffffff; color: #1a1a1a; line-height: 1.6; overflow-x: hidden; }
+img { max-width: 100%; height: auto; display: block; }
+button { font-family: 'Inter', sans-serif; }
+@keyframes subtleIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes modalSlideIn { from { opacity: 0; transform: scale(0.95) translateY(30px); } to { opacity: 1; transform: scale(1) translateY(0); } }
+@keyframes backdropFade { from { opacity: 0; } to { opacity: 1; } }
+.breadcrumb { background: #f8f8f8; padding: 1rem; border-bottom: 1px solid #e0e0e0; font-size: 0.85rem; overflow-x: auto; }
+.breadcrumb a { color: #aa8a34; text-decoration: none; transition: opacity 0.3s ease; }
+.breadcrumb a:hover { opacity: 0.8; outline: 2px solid #aa8a34; outline-offset: 2px; border-radius: 2px; }
+header { background: linear-gradient(135deg, #ffffff 0%, #f8f8f8 100%); padding: 3rem 1.5rem; text-align: center; border-bottom: 1px solid #e0e0e0; position: relative; overflow: hidden; }
+header::before { content: ''; position: absolute; top: -50%; right: -20%; width: 500px; height: 500px; background: radial-gradient(circle, rgba(170, 138, 52, 0.02) 0%, transparent 70%); border-radius: 50%; }
+.header-content { position: relative; z-index: 2; animation: subtleIn 1s ease-out; max-width: 100%; }
+h1 { font-size: 1.75rem; font-weight: 300; letter-spacing: -1px; margin-bottom: 1rem; color: #1a1a1a; line-height: 1.2; word-break: break-word; }
+h1 strong { font-weight: 700; color: #aa8a34; display: block; }
+.tagline { font-size: 1rem; color: #666; font-weight: 300; margin-bottom: 2rem; letter-spacing: 0.3px; line-height: 1.5; }
+.credential { display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 1.5rem; margin-top: 2rem; padding-top: 2rem; border-top: 1px solid #e0e0e0; font-size: 0.9rem; }
+.credential-item { text-align: center; }
+.credential-value { font-size: 1.8rem; font-weight: 700; color: #aa8a34; margin-bottom: 0.3rem; line-height: 1; }
+.credential-label { color: #888; text-transform: uppercase; letter-spacing: 0.8px; font-size: 0.7rem; font-weight: 600; word-break: break-word; }
+.disclaimer-section { background: linear-gradient(135deg, #f8f8f8 0%, #f0f0f0 100%); padding: 2rem 1.5rem; margin: 1rem 0 2rem 0; border-left: 4px solid #aa8a34; }
+.disclaimer-content { max-width: 1400px; margin: 0 auto; display: flex; gap: 1.5rem; align-items: flex-start; }
+.disclaimer-icon { width: 32px; height: 32px; fill: #aa8a34; flex-shrink: 0; margin-top: 0.25rem; }
+.disclaimer-text h3 { font-size: 1rem; font-weight: 600; color: #1a1a1a; margin-bottom: 0.5rem; }
+.disclaimer-text p { font-size: 0.9rem; color: #666; line-height: 1.6; margin: 0; }
+.disclaimer-text strong { color: #aa8a34; font-weight: 600; }
+.portfolio-grid { display: grid; grid-template-columns: 1fr; gap: 1.5rem; max-width: 100%; margin: 0 auto; padding: 1.5rem; }
+.case-card { position: relative; background: #ffffff; border: 1px solid #e5e5e5; overflow: hidden; transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); animation: subtleIn 0.6s ease-out; cursor: pointer; display: flex; flex-direction: column; height: 100%; touch-action: manipulation; }
+.case-card:active { transform: scale(0.98); }
+.case-card:hover { border-color: #aa8a34; box-shadow: 0 12px 24px rgba(0, 0, 0, 0.06); transform: translateY(-4px); }
+.case-card:focus-visible { outline: 2px solid #aa8a34; outline-offset: 2px; }
+.case-image { width: 100%; height: 150px; background: linear-gradient(135deg, #f0f0f0 0%, #e8e8e8 100%); overflow: hidden; position: relative; display: flex; align-items: center; justify-content: center; color: #ccc; font-size: 0.85rem; flex-shrink: 0; }
+.case-image svg { width: 100%; height: 100%; object-fit: contain; }
+.case-content { padding: 1.25rem; flex: 1; display: flex; flex-direction: column; }
+.case-meta { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1rem; gap: 0.75rem; flex-wrap: wrap; }
+.case-category { background: #f5f5f5; color: #aa8a34; padding: 0.35rem 0.75rem; font-size: 0.65rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; border: 1px solid #e5e5e5; border-radius: 0; white-space: nowrap; }
+.case-roi { background: transparent; border: 1px solid #aa8a34; color: #aa8a34; padding: 0.4rem 0.85rem; font-size: 0.8rem; font-weight: 700; border-radius: 0; white-space: nowrap; }
+.case-title { font-size: 1.1rem; font-weight: 600; margin: 0.8rem 0; color: #1a1a1a; letter-spacing: -0.3px; line-height: 1.3; transition: color 0.3s ease; }
+.case-card:hover .case-title { color: #aa8a34; }
+.case-description { font-size: 0.85rem; color: #666; line-height: 1.6; margin-bottom: 1rem; font-weight: 400; flex: 1; }
+.case-metrics { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1rem; padding-bottom: 1rem; border-bottom: 1px solid #e5e5e5; }
+.metric { display: flex; flex-direction: column; }
+.metric-value { font-size: 1.1rem; font-weight: 700; color: #aa8a34; margin-bottom: 0.2rem; line-height: 1; }
+.metric-label { font-size: 0.7rem; color: #999; text-transform: uppercase; letter-spacing: 0.8px; font-weight: 600; }
+.case-footer { display: flex; justify-content: space-between; align-items: center; gap: 0.75rem; flex-wrap: wrap; }
+.case-client { font-size: 0.8rem; color: #666; font-weight: 500; flex: 1; min-width: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.btn-download-case { padding: 0.6rem 0.9rem; background: #aa8a34; color: #1a1a1a; border: none; font-weight: 600; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.5px; cursor: pointer; transition: all 0.3s ease; border-radius: 2px; white-space: nowrap; }
+.btn-download-case:hover { background: transparent; color: #aa8a34; border: 1px solid #aa8a34; }
+.case-arrow { width: 36px; height: 36px; border: 1px solid #aa8a34; display: flex; align-items: center; justify-content: center; transition: all 0.3s ease; border-radius: 0; background: transparent; cursor: pointer; flex-shrink: 0; touch-action: manipulation; }
+.case-card:hover .case-arrow { background: #aa8a34; }
+.case-arrow svg { width: 16px; height: 16px; fill: #aa8a34; transition: fill 0.3s ease; }
+.case-card:hover .case-arrow svg { fill: #ffffff; }
+.no-results { grid-column: 1 / -1; text-align: center; padding: 3rem 1.5rem; color: #999; }
+.cta-section { background: linear-gradient(135deg, #f8f8f8 0%, #f0f0f0 100%); padding: 4rem 1.5rem; text-align: center; border-top: 1px solid #e0e0e0; border-bottom: 1px solid #e0e0e0; margin: 2rem 0; }
+.cta-content { max-width: 600px; margin: 0 auto; }
+.cta-content h2 { font-size: 1.8rem; font-weight: 600; color: #1a1a1a; margin-bottom: 0.8rem; letter-spacing: -0.5px; }
+.cta-content p { font-size: 1rem; color: #666; margin-bottom: 2rem; line-height: 1.6; }
+.btn-cta-portfolio { padding: 1.2rem 2.5rem; background: #aa8a34; color: #1a1a1a; border: none; font-weight: 700; font-size: 1.05rem; text-transform: uppercase; letter-spacing: 1px; cursor: pointer; border-radius: 2px; transition: all 0.3s ease; font-family: 'Inter', sans-serif; }
+.btn-cta-portfolio:hover { background: transparent; color: #aa8a34; border: 2px solid #aa8a34; transform: translateY(-2px); }
+.contact-section { background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%); color: #fff; padding: 3rem 1.5rem; margin: 0; border-top: none; }
+.contact-container { max-width: 1400px; margin: 0 auto; display: grid; grid-template-columns: 1fr; gap: 3rem; }
+.contact-info h2 { font-size: 1.8rem; font-weight: 600; margin-bottom: 1rem; color: #fff; letter-spacing: -0.5px; }
+.contact-info > p { font-size: 1rem; color: #ccc; line-height: 1.6; margin-bottom: 2rem; max-width: 500px; }
+.contact-item { display: flex; gap: 1.5rem; align-items: center; text-decoration: none; color: inherit; padding: 1.25rem; background: rgba(170, 138, 52, 0.1); border: 1px solid rgba(170, 138, 52, 0.3); transition: all 0.3s ease; border-radius: 2px; }
+.contact-item:hover { background: rgba(170, 138, 52, 0.2); border-color: #aa8a34; transform: translateX(4px); }
+.contact-item svg { width: 32px; height: 32px; fill: #aa8a34; flex-shrink: 0; }
+.contact-item div { display: flex; flex-direction: column; }
+.contact-label { font-size: 0.85rem; color: #aaa; text-transform: uppercase; letter-spacing: 1px; font-weight: 600; }
+.contact-value { font-size: 1.1rem; color: #fff; font-weight: 600; }
+.btn-toggle { background: #aa8a34; color: #1a1a1a; border: 1px solid #aa8a34; padding: 1rem 2rem; font-weight: 600; font-size: 1rem; cursor: pointer; transition: all 0.3s ease; text-transform: uppercase; letter-spacing: 1px; border-radius: 2px; }
+.btn-toggle:hover { background: transparent; color: #aa8a34; }
+.contact-form-wrapper { background: rgba(255, 255, 255, 0.08); border: 1px solid rgba(170, 138, 52, 0.4); padding: 2rem; border-radius: 2px; animation: subtleIn 0.4s ease-out; backdrop-filter: blur(10px); }
+.contact-form { display: grid; gap: 1.5rem; }
+.form-group { display: flex; flex-direction: column; }
+.form-group label { font-size: 0.9rem; font-weight: 600; margin-bottom: 0.5rem; color: #fff; text-transform: uppercase; letter-spacing: 0.8px; }
+.form-group input, .form-group select, .form-group textarea { padding: 0.9rem; background: rgba(255, 255, 255, 0.12); border: 1px solid rgba(170, 138, 52, 0.4); color: #fff; font-family: 'Inter', sans-serif; font-size: 0.95rem; transition: all 0.3s ease; border-radius: 2px; }
+.form-group input::placeholder, .form-group textarea::placeholder { color: rgba(255, 255, 255, 0.6); }
+.form-group input:focus, .form-group select:focus, .form-group textarea:focus { outline: none; border-color: #aa8a34; background: rgba(170, 138, 52, 0.15); box-shadow: 0 0 0 3px rgba(170, 138, 52, 0.15); }
+.form-actions { display: flex; gap: 1rem; flex-wrap: wrap; }
+.btn-submit, .btn-cancel { padding: 0.9rem 1.8rem; font-weight: 600; font-size: 0.95rem; border: 1px solid #aa8a34; border-radius: 2px; cursor: pointer; text-transform: uppercase; letter-spacing: 0.8px; transition: all 0.3s ease; font-family: 'Inter', sans-serif; }
+.btn-submit { background: #aa8a34; color: #1a1a1a; flex: 1; min-width: 150px; }
+.btn-submit:hover { background: transparent; color: #aa8a34; }
+.btn-cancel { background: transparent; color: #aa8a34; }
+.btn-cancel:hover { background: #aa8a34; color: #1a1a1a; }
+.form-status { padding: 1rem; border-radius: 2px; text-align: center; font-weight: 600; animation: subtleIn 0.3s ease-out; }
+.form-status.success { background: rgba(76, 175, 80, 0.2); border: 1px solid rgba(76, 175, 80, 0.5); color: #4caf50; }
+.form-status.error { background: rgba(244, 67, 54, 0.2); border: 1px solid rgba(244, 67, 54, 0.5); color: #f44336; }
+.email-capture-backdrop { position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0, 0, 0, 0.6); display: none; z-index: 3000; }
+.email-capture-backdrop.active { display: block; }
+.email-capture-modal { position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); background: #ffffff; padding: 2.5rem; max-width: 450px; width: 90%; border-radius: 4px; box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3); display: none; z-index: 3001; animation: modalSlideIn 0.3s ease-out; }
+.email-capture-modal.active { display: block; }
+.email-capture-modal h2 { font-size: 1.4rem; font-weight: 600; margin-bottom: 0.8rem; color: #1a1a1a; }
+.email-capture-modal p { font-size: 0.9rem; color: #666; margin-bottom: 1.5rem; }
+.modal-close-email { position: absolute; top: 1rem; right: 1rem; width: 32px; height: 32px; border: 1px solid #d0d0d0; background: transparent; cursor: pointer; font-size: 1.3rem; color: #1a1a1a; transition: all 0.3s ease; }
+.modal-close-email:hover { border-color: #aa8a34; color: #aa8a34; }
+.email-form { display: flex; flex-direction: column; gap: 1rem; }
+.email-form input { padding: 0.8rem; border: 1px solid #d0d0d0; font-size: 0.95rem; font-family: 'Inter', sans-serif; border-radius: 2px; transition: all 0.3s ease; }
+.email-form input:focus { outline: none; border-color: #aa8a34; box-shadow: 0 0 0 3px rgba(170, 138, 52, 0.1); }
+.btn-get-pdf { padding: 1rem; background: #aa8a34; color: #1a1a1a; border: none; font-weight: 700; font-size: 1rem; text-transform: uppercase; letter-spacing: 1px; cursor: pointer; border-radius: 2px; transition: all 0.3s ease; }
+.btn-get-pdf:hover { background: transparent; color: #aa8a34; border: 2px solid #aa8a34; }
+.email-form-status { padding: 1rem; text-align: center; border-radius: 2px; font-weight: 600; margin-top: 0.5rem; }
+.email-form-status.success { background: rgba(76, 175, 80, 0.2); border: 1px solid rgba(76, 175, 80, 0.5); color: #4caf50; }
+.email-form-status.error { background: rgba(244, 67, 54, 0.2); border: 1px solid rgba(244, 67, 54, 0.5); color: #f44336; }
+footer { background: linear-gradient(135deg, #0f0f0f 0%, #1a1a1a 100%); color: #fff; padding: 3rem 1.5rem; border-top: none; margin-top: 0; margin-bottom: 0; }
+.footer-content { max-width: 1400px; margin: 0 auto; }
+.footer-top { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2.5rem; margin-bottom: 2.5rem; padding-bottom: 2.5rem; border-bottom: 1px solid #333; }
+.footer-section h4 { font-size: 0.9rem; font-weight: 700; color: #aa8a34; text-transform: uppercase; letter-spacing: 1.2px; margin-bottom: 1rem; line-height: 1; }
+.footer-section p { font-size: 0.85rem; color: #e0e0e0; line-height: 1.6; margin-bottom: 0.8rem; }
+.footer-bottom { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 2rem; padding-top: 1.5rem; border-top: 1px solid #333; }
+.footer-copyright { font-size: 0.8rem; color: #b0b0b0; flex: 1; min-width: 250px; }
+.footer-copyright strong { color: #ffffff; font-weight: 600; }
+.footer-nav { display: flex; gap: 2.5rem; justify-content: center; flex: 1; min-width: 300px; }
+.footer-nav a { font-size: 0.9rem; color: #e0e0e0; text-decoration: none; transition: all 0.3s ease; text-transform: uppercase; letter-spacing: 0.5px; font-weight: 500; padding: 0.5rem; border-bottom: 2px solid transparent; }
+.footer-nav a:hover { color: #aa8a34; border-bottom-color: #aa8a34; }
+@media (min-width: 768px) { header { padding: 5rem 3rem; } h1 { font-size: 2.5rem; } .portfolio-grid { grid-template-columns: repeat(2, 1fr); gap: 2rem; padding: 3rem; } .case-image { height: 200px; } }
+@media (min-width: 1024px) { header { padding: 6rem 4rem; } h1 { font-size: 3.5rem; } .portfolio-grid { grid-template-columns: repeat(3, 1fr); padding: 4rem; gap: 2.5rem; } .case-image { height: 220px; } }
+@media (min-width: 1440px) { .portfolio-grid { grid-template-columns: repeat(4, 1fr); } }
+.reveal { opacity: 0; transform: translateY(20px); animation: subtleIn 0.6s ease-out forwards; }
+</style>
+</head>
+<body>
+
+<div class="breadcrumb">
+  <a href="/">← Acasă</a>
+  <span> / </span>
+  <span>Portofoliu Proiecte</span>
+</div>
+
+<header>
+  <div class="header-content">
+    <h1>Portofoliu <strong>Proiecte</strong></h1>
+    <p class="tagline">Fiecare proiect este o poveste de transformare: de la ideea care nu merge, la business care rulează pe profit</p>
+    <div class="credential">
+      <div class="credential-item">
+        <div class="credential-value">5</div>
+        <div class="credential-label">Ani Experiență</div>
+      </div>
+      <div class="credential-item">
+        <div class="credential-value">50+</div>
+        <div class="credential-label">Proiecte Completate</div>
+      </div>
+      <div class="credential-item">
+        <div class="credential-value">95%</div>
+        <div class="credential-label">Satisfacție Clienți</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="disclaimer-section">
+  <div class="disclaimer-content">
+    <svg class="disclaimer-icon" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg>
+    <div class="disclaimer-text">
+      <h3>Confidențialitate & Discreție</h3>
+      <p>Toți clienții noștri semnează <strong>acorduri de confidențialitate</strong> pe termen lung. Din respect pentru parteneriatele lor și pentru strategiile competitive, <strong>nu divulgăm nicio informație despre proiecte, locații, bugete sau rezultate specifice</strong> fără consimțământ explicit. Portofoliul afișat conține <strong>case studies anonimizate</strong> pentru a ilustra procesul și capabilitatea noastră, nu detalii reale.</p>
+    </div>
+  </div>
+</div>
+
+<div class="portfolio-grid" id="portfolioGrid"></div>
+
+<div class="cta-section">
+  <div class="cta-content">
+    <h2>Vrei să vezi portofoliul complet?</h2>
+    <p>Accesează peste 50 de proiecte reale, businessuri transformate și rezultate concrete.</p>
+    <button class="btn-cta-portfolio" id="portfolioAccessBtn">📁 Accesează portofoliu complet →</button>
+  </div>
+</div>
+
+<div class="email-capture-modal" id="emailCaptureModal">
+  <button class="modal-close-email" id="closeEmailModal">✕</button>
+  <h2>Obțineți Case Study-ul Complet</h2>
+  <p>Introduceți email-ul pentru a descărca case study-ul detaliat (PDF)</p>
+  <form id="emailCaptureForm" class="email-form">
+    <input type="text" id="captureName" placeholder="Nume complet..." required>
+    <input type="email" id="captureEmail" placeholder="Email-ul tău..." required>
+    <input type="text" id="captureCompany" placeholder="Companie (optional)">
+    <button type="submit" class="btn-get-pdf">Descarcă PDF Gratuit →</button>
+  </form>
+  <div class="email-form-status" id="emailFormStatus" style="display: none;"></div>
+</div>
+<div class="email-capture-backdrop" id="emailCaptureBackdrop"></div>
+
+<section class="contact-section">
+  <div class="contact-container">
+    <div class="contact-info">
+      <h2>Gata De Transformare?</h2>
+      <p>Suntem aici ca să vorbim despre strategia și roadmap-ul tău. Primă ședință e diagnostică.</p>
+      <div class="contact-methods">
+        <a href="tel:+40756775675" class="contact-item">
+          <svg viewBox="0 0 24 24"><path d="M17 10.5V7c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1v10c0 .55.45 1 1 1h12c.55 0 1-.45 1-1v-3.5l4 4v-11l-4 4z"/></svg>
+          <div>
+            <span class="contact-label">Telefon</span>
+            <span class="contact-value">+40 756775675</span>
+          </div>
+        </a>
+        <a href="https://wa.me/40756775675" class="contact-item" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24"><path d="M17.665 13.817c-.757-.468-1.476-.961-2.156-1.482-.197-.151-.413-.299-.603-.467-.21-.189-.315-.419-.263-.698.092-.515.181-1.032.263-1.548.08-.502.166-.003.247-.503.129-.827.267-1.651.396-2.476.056-.365.174-.727.348-1.067.238-.484.581-.762 1.095-.891.603-.155 1.209.007 1.766.211.657.238 1.286.546 1.841.959 1.193.883 2.094 2.049 2.65 3.46.284.722.424 1.473.411 2.235-.016.974-.19 1.924-.54 2.833-.741 1.948-2.05 3.508-3.821 4.638-.846.545-1.764.943-2.747 1.188-.612.152-1.233.21-1.858.174-1.196-.069-2.308-.411-3.31-1.025-1.309-.819-2.366-1.97-3.071-3.377-.401-.802-.64-1.656-.71-2.547-.048-.618-.014-1.235.1-1.843.201-1.075.603-2.053 1.2-2.936.722-1.089 1.643-1.997 2.765-2.666.687-.417 1.436-.732 2.232-.94.417-.107.84-.183 1.266-.226.384-.038.746.086.994.368.171.19.28.427.315.68.081.565.161 1.132.241 1.697.063.439.126.878.189 1.317.044.308.015.606-.086.897-.113.33-.35.56-.66.71-.535.261-1.073.506-1.609.752-.417.19-.835.381-1.252.572-.241.111-.468.267-.643.473-.24.283-.354.638-.33 1.001.046.707.38 1.296.942 1.707.506.368 1.053.629 1.629.786.8.217 1.616.247 2.429.086 1.127-.221 2.156-.71 3.037-1.456.769-.622 1.375-1.428 1.79-2.371.243-.564.407-1.159.489-1.776.051-.373-.01-.738-.174-1.081"/></svg>
+          <div>
+            <span class="contact-label">WhatsApp</span>
+            <span class="contact-value">Mesaj direct</span>
+          </div>
+        </a>
+      </div>
+      <button id="contactFormToggle" class="btn-toggle">Scrie-ne →</button>
+    </div>
+    <div class="contact-form-wrapper" id="contactFormWrapper" style="display: none;">
+      <form id="contactForm" class="contact-form" novalidate>
+        <div class="form-group">
+          <label for="contactName">Nume Complet</label>
+          <input type="text" id="contactName" name="name" placeholder="Nume..." required>
+        </div>
+        <div class="form-group">
+          <label for="contactEmail">Email</label>
+          <input type="email" id="contactEmail" name="email" placeholder="email@company.ro" required>
+        </div>
+        <div class="form-group">
+          <label for="contactPhone">Telefon</label>
+          <input type="tel" id="contactPhone" name="phone" placeholder="+40 7XX XXX XXX">
+        </div>
+        <div class="form-group">
+          <label for="contactCompany">Companie (Optional)</label>
+          <input type="text" id="contactCompany" name="company" placeholder="Nume companie...">
+        </div>
+        <div class="form-group">
+          <label for="contactType">Tip Serviciu Interesat</label>
+          <select id="contactType" name="type" required>
+            <option value="">-- Selectează --</option>
+            <option value="web-dev">Web Development</option>
+            <option value="marketing">Digital Marketing</option>
+            <option value="design">Design & Branding</option>
+            <option value="consulting">Business Strategy</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="contactMessage">Mesaj</label>
+          <textarea id="contactMessage" name="message" placeholder="Descrie situația ta..." rows="4" required></textarea>
+        </div>
+        <div class="form-actions">
+          <button type="submit" class="btn-submit">Trimite Cerere</button>
+          <button type="button" class="btn-cancel" id="cancelForm">Anulează</button>
+        </div>
+        <div class="form-status" id="formStatus" style="display: none;"></div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-content">
+    <div class="footer-top">
+      <div class="footer-section">
+        <h4>SPM Grup</h4>
+        <p>Agenție de consultanță. Transformări strategice pentru companii în creștere.</p>
+        <p><strong>Suceava, România</strong></p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-copyright">
+        © 2025 <strong>SPM Grup</strong> | Soluții Digitale Premium | Toate Drepturile Rezervate
+      </div>
+      <nav class="footer-nav">
+        <a href="/">Acasă</a>
+        <a href="/portfolio">Portofoliu</a>
+        <a href="#servicii">Servicii</a>
+      </nav>
+    </div>
+  </div>
+</footer>
+
+<script>
+// ===== PROJECT DATA - 6 PROIECTE REALE CU IMAGINI SVG INLINE =====
+const projects = [
+  { id: 1, title: "Brand Redesign - Casa Matei Restaurant", imageSvg: `<svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="g1" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#d4af37;stop-opacity:1" /><stop offset="100%" style="stop-color:#aa8a34;stop-opacity:1" /></linearGradient></defs><rect width="400" height="300" fill="url(#g1)"/><rect x="50" y="80" width="150" height="150" fill="#2c1810"/><circle cx="200" cy="150" r="60" fill="#d4af37"/><text x="200" y="280" font-size="20" font-weight="bold" text-anchor="middle" fill="white">Casa Matei</text></svg>`, client: "Casa Matei", category: "design", roi: 284, budget: 38, timeline: "18 săptămâni", industry: "F&B Premium", desc: "Rebranding complet: logo, interior, digital", services: ["Logo Design", "Brand Guidelines", "Interior Design", "Photography", "Social Media"], results: ["Revenue +61%", "Average Bill +49%", "Instagram 200 → 8.2K", "Online reservations +38%", "Satisfaction 4.7/5"] },
+  { id: 2, title: "B2B Website - Lead Generation", imageSvg: `<svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="g2" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#4a90e2;stop-opacity:1" /><stop offset="100%" style="stop-color:#357abd;stop-opacity:1" /></linearGradient></defs><rect width="400" height="300" fill="url(#g2)"/><rect x="40" y="40" width="320" height="220" fill="white" opacity="0.1" stroke="white" stroke-width="2" rx="4"/><circle cx="100" cy="200" r="20" fill="#ffd700"/><text x="200" y="280" font-size="20" font-weight="bold" text-anchor="middle" fill="white">Lead Gen</text></svg>`, client: "Industrial Holding", category: "web-dev", roi: 1900, budget: 42, timeline: "16 săptămâni", industry: "B2B", desc: "Website din brochure în sales tool: 7 → 134 leads/luna", services: ["Next.js Dev", "Lead Capture", "SEO", "Email Automation", "CRO"], results: ["Leads +1,814%", "Traffic +9,150%", "Revenue +1.9M EUR/an", "Conversion +300%", "Mobile +833%"] },
+  { id: 3, title: "B2B SaaS SEO & Content", imageSvg: `<svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="g3" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#f09c3e;stop-opacity:1" /><stop offset="100%" style="stop-color:#e67e22;stop-opacity:1" /></linearGradient></defs><rect width="400" height="300" fill="url(#g3)"/><polyline points="80,220 140,120 200,160 260,60 320,140" fill="none" stroke="white" stroke-width="3" stroke-linecap="round"/><circle cx="80" cy="220" r="5" fill="white"/><circle cx="320" cy="140" r="5" fill="white"/><text x="200" y="280" font-size="20" font-weight="bold" text-anchor="middle" fill="white">SEO Growth</text></svg>`, client: "SaaS Enterprise", category: "marketing", roi: 5286, budget: 85, timeline: "20 săptămâni", industry: "SaaS", desc: "Page 8 Google → Top rankings: 120 → 15K organic/luna", services: ["SEO Audit", "Content Strategy", "Technical SEO", "Link Building", "Training"], results: ["Organic +12,400%", "MQL +16,567%", "CAC 7x reduction", "LTV/CAC 83x", "Revenue 4.5M EUR/an"] },
+  { id: 4, title: "SaaS Pricing Strategy", imageSvg: `<svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="g4" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#9b59b6;stop-opacity:1" /><stop offset="100%" style="stop-color:#8e44ad;stop-opacity:1" /></linearGradient></defs><rect width="400" height="300" fill="url(#g4)"/><rect x="50" y="180" width="70" height="80" fill="white" opacity="0.7"/><rect x="140" y="130" width="70" height="130" fill="white" opacity="0.85"/><rect x="230" y="80" width="70" height="180" fill="white" opacity="1"/><text x="200" y="280" font-size="20" font-weight="bold" text-anchor="middle" fill="white">Pricing Tiers</text></svg>`, client: "SaaS Platform", category: "consulting", roi: 292, budget: 12, timeline: "10 săptămâni", industry: "SaaS Tools", desc: "Single-tier → Tiering strategy: ARR +35% (337.5K EUR)", services: ["Segmentation", "Pricing Models", "Tiering", "Grandfathering", "GTM"], results: ["ARPU +36%", "ARR +35% (+87.5K EUR)", "Churn -50%", "LTV/CAC 5.1x", "NPS +6 points"] },
+  { id: 5, title: "Social Media & Community", imageSvg: `<svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="g5" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#e74c3c;stop-opacity:1" /><stop offset="100%" style="stop-color:#c0392b;stop-opacity:1" /></linearGradient></defs><rect width="400" height="300" fill="url(#g5)"/><circle cx="120" cy="130" r="40" fill="white" opacity="0.9"/><circle cx="280" cy="130" r="40" fill="white" opacity="0.8"/><circle cx="200" cy="220" r="40" fill="white" opacity="0.9"/><text x="200" y="280" font-size="20" font-weight="bold" text-anchor="middle" fill="white">Community</text></svg>`, client: "HR Tech SaaS", category: "marketing", roi: 5900, budget: 58, timeline: "18 săptămâni", industry: "HR Tech", desc: "5K → 45K LinkedIn followers + 850 MQL/luna", services: ["Audit", "Content Strategy", "Advocacy", "Platform Opt", "Analytics"], results: ["LinkedIn 9x growth", "Instagram +12K", "Reach 6M+ organic", "MQL 850/luna", "Revenue 3.4M EUR/an"] },
+  { id: 6, title: "Market Entry Romania", imageSvg: `<svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="g6" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#27ae60;stop-opacity:1" /><stop offset="100%" style="stop-color:#229954;stop-opacity:1" /></linearGradient></defs><rect width="400" height="300" fill="url(#g6)"/><polygon points="150,90 200,70 250,90 250,140 200,160 150,140" fill="white" opacity="0.9"/><polygon points="100,180 150,160 200,180 200,240 150,260 100,240" fill="white" opacity="0.8"/><polygon points="200,180 250,160 300,180 300,240 250,260 200,240" fill="white" opacity="0.9"/><text x="200" y="280" font-size="20" font-weight="bold" text-anchor="middle" fill="white">Market Entry</text></svg>`, client: "US SaaS Platform", category: "consulting", roi: 560, budget: 52, timeline: "12 luni", industry: "SaaS Enterprise", desc: "Market entry strategy: 2.8M EUR Year 1 (112% vs target)", services: ["Research", "TAM Validation", "Positioning", "Partnerships", "Localization"], results: ["Year 1: 2.8M EUR", "85 customers acquired", "Premium position", "LTV/CAC 8.2x", "ACL 28.5K EUR"] }
+];
+
+// ===== RENDER PROJECTS =====
+function render(data) {
+  const grid = document.getElementById('portfolioGrid');
+  if (data.length === 0) {
+    grid.innerHTML = '<div class="no-results"><p>Nu au fost găsite proiecte.</p></div>';
+    return;
+  }
+  grid.innerHTML = data.map((p, i) => `
+    <div class="case-card reveal" style="animation-delay: ${i * 0.06}s" data-id="${p.id}">
+      <div class="case-image">${p.imageSvg}</div>
+      <div class="case-content">
+        <div class="case-meta">
+          <span class="case-category">${p.category}</span>
+          <span class="case-roi">+${p.roi}%</span>
+        </div>
+        <h3 class="case-title">${p.title}</h3>
+        <p class="case-description">${p.desc}</p>
+        <div class="case-metrics">
+          <div class="metric"><div class="metric-value">${p.budget}K</div><div class="metric-label">Buget</div></div>
+          <div class="metric"><div class="metric-value">${p.timeline}</div><div class="metric-label">Timp</div></div>
+        </div>
+        <div class="case-footer">
+          <span class="case-client">${p.client}</span>
+          <button class="btn-download-case" data-project-id="${p.id}">📥 Descarcă</button>
+          <div class="case-arrow"><svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+        </div>
+      </div>
+    </div>
+  `).join('');
+}
+
+render(projects);
+
+// ===== EMAIL CAPTURE =====
+const emailCaptureModal = document.getElementById('emailCaptureModal');
+const emailCaptureBackdrop = document.getElementById('emailCaptureBackdrop');
+const emailCaptureForm = document.getElementById('emailCaptureForm');
+const closeEmailModal = document.getElementById('closeEmailModal');
+
+document.addEventListener('click', (e) => {
+  if (e.target.classList.contains('btn-download-case')) {
+    emailCaptureModal.classList.add('active');
+    emailCaptureBackdrop.classList.add('active');
+    document.body.style.overflow = 'hidden';
+  }
+});
+
+function closeEmailCaptureModal() {
+  emailCaptureModal.classList.remove('active');
+  emailCaptureBackdrop.classList.remove('active');
+  document.body.style.overflow = 'auto';
+  emailCaptureForm.reset();
+  document.getElementById('emailFormStatus').style.display = 'none';
+}
+
+closeEmailModal.addEventListener('click', closeEmailCaptureModal);
+emailCaptureBackdrop.addEventListener('click', closeEmailCaptureModal);
+
+emailCaptureForm.addEventListener('submit', async (e) => {
+  e.preventDefault();
+  const statusEl = document.getElementById('emailFormStatus');
+  statusEl.className = 'email-form-status success';
+  statusEl.textContent = '✓ Email capturé! PDF-ul se descarcă...';
+  statusEl.style.display = 'block';
+  setTimeout(() => { closeEmailCaptureModal(); }, 2000);
+});
+
+document.getElementById('portfolioAccessBtn').addEventListener('click', () => {
+  emailCaptureModal.classList.add('active');
+  emailCaptureBackdrop.classList.add('active');
+  document.body.style.overflow = 'hidden';
+});
+
+// ===== CONTACT FORM =====
+document.getElementById('contactFormToggle').addEventListener('click', () => {
+  const wrapper = document.getElementById('contactFormWrapper');
+  wrapper.style.display = wrapper.style.display === 'none' ? 'block' : 'none';
+});
+
+document.getElementById('cancelForm').addEventListener('click', () => {
+  document.getElementById('contactFormWrapper').style.display = 'none';
+  document.getElementById('contactForm').reset();
+});
+
+document.getElementById('contactForm').addEventListener('submit', async (e) => {
+  e.preventDefault();
+  const statusEl = document.getElementById('formStatus');
+  statusEl.className = 'form-status success';
+  statusEl.textContent = '✓ Mesaj trimis! Te vom contacta în curând.';
+  statusEl.style.display = 'block';
+  document.getElementById('contactForm').reset();
+  setTimeout(() => {
+    document.getElementById('contactFormWrapper').style.display = 'none';
+    statusEl.style.display = 'none';
+  }, 3000);
+});
+</script>
+</body>
+</html>
